@@ -1,0 +1,13 @@
+# Standards: 0.1
+---
+- name: Write executable script
+  template:
+    src: cronic.j2
+    dest: /usr/local/bin/cronic
+    owner: "{{ cronic_owner | default('root') }}"
+    group: "{{ cronic_group | default('root') }}"
+    mode: u=rwx,g=rwx,o=
+  tags:
+    - cronic
+
+...

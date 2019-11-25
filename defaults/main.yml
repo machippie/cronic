@@ -1,0 +1,9 @@
+# Standards: 0.1
+---
+# @var cronic_owner:description: Owner of the executable
+cronic_owner: root
+
+# @var cronic_group:description: Group of the executable
+cronic_group: admin
+
+...
