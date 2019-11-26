@@ -7,7 +7,7 @@ Group of the executable
 
 #### Default value
 
-```YAML
+```yaml
 cronic_group: admin
 ```
 
@@ -17,7 +17,7 @@ Owner of the executable
 
 #### Default value
 
-```YAML
+```yaml
 cronic_owner: root
 ```
 ## Dependencies
