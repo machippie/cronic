@@ -52,30 +52,23 @@ def readme(ctx):
           'ANSIBLE_DOCTOR_LOG_LEVEL': 'INFO',
           'ANSIBLE_DOCTOR_FORCE_OVERWRITE': True,
           'ANSIBLE_DOCTOR_EXCLUDE_FILES': 'molecule/',
-          'ANSIBLE_DOCTOR_CUSTOM_HEADER': 'misc/HEADER.md',
+          'ANSIBLE_DOCTOR_TEMPLATE_DIR': 'doctor',
+          'ANSIBLE_DOCTOR_TEMPLATE': 'jekyll',
+          'ANSIBLE_DOCTOR_OUTPUT_DIR': 'doctor/publish',
         },
       },
       {
-        'name': 'commit',
-        'image': 'plugins/git-action:latest',
+        'name': 'publish',
+        'image': 'plugins/gh-pages:latest',
         'pull': 'always',
         'settings': {
-          'actions': [
-            'commit',
-            'push',
-          ],
-          'author_email': 'drone@webhippie.de',
-          'author_name': 'Drone',
-          'branch': 'master',
-          'message': '[skip ci] update readme',
-          'remote': ctx.repo.git_http_url,
-          'netrc_machine': 'github.com',
-          'netrc_username': {
+          'username': {
             'from_secret': 'github_username',
           },
-          'netrc_password': {
+          'password': {
             'from_secret': 'github_token',
           },
+          'pages_directory': 'doctor/publish/',
         },
         'when': {
           'ref': [
@@ -90,6 +83,7 @@ def readme(ctx):
     'trigger': {
       'ref': [
         'refs/heads/master',
+        'refs/tags/**',
         'refs/pull/**',
       ],
     },

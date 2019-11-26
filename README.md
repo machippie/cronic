@@ -2,49 +2,34 @@
 
 [![Build Status](https://cloud.drone.io/api/badges/machippie/cronic/status.svg)](https://cloud.drone.io/machippie/cronic)
 
-Ansible role to configure cronic
+Ansible role to configure cronic.
 
-## Table of content
+## Usage
 
-* [Default Variables](#default-variables)
-  * [cronic_group](#cronic_group)
-  * [cronic_owner](#cronic_owner)
-* [Dependencies](#dependencies)
-* [License](#license)
-* [Author](#author)
+To get an overview about the defaults you can take a look at the automatically generated documentation available at https://machippie.github.io/cronic/.
 
----
+## Security
 
-## Default Variables
+If you find a security issue please contact thomas@webhippie.de first.
 
-### cronic_group
 
-Group of the executable
+## Contributing
 
-#### Default value
+Fork -> Patch -> Push -> Pull Request
 
-```YAML
-cronic_group: admin
-```
 
-### cronic_owner
+## Authors
 
-Owner of the executable
+* [Thomas Boerger](https://github.com/tboerger)
 
-#### Default value
-
-```YAML
-cronic_owner: root
-```
-
-## Dependencies
-
-None.
 
 ## License
 
 Apache-2.0
 
-## Author
 
-Thomas Boerger
+## Copyright
+
+```
+Copyright (c) 2019 Thomas Boerger <http://www.webhippie.de>
+```
