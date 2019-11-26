@@ -13,7 +13,7 @@
 
 #### Default value
 
-```YAML
+```yaml
 {% if item.value is mapping %}
 {{ item.value | to_nice_yaml(indent=2) }}
 {% else %}
@@ -27,7 +27,7 @@
 
 #### Example usage
 
-```YAML
+```yaml
 {% if item.example is mapping %}
 {{ item.example | to_nice_yaml(indent=2) }}
 {% else %}
