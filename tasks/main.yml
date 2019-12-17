@@ -1,5 +1,15 @@
 # Standards: 0.1
 ---
+- name: Create parent directory
+  file:
+    path: /usr/local/bin
+    owner: "{{ cronic_owner | default('root') }}"
+    group: "{{ cronic_group | default('root') }}"
+    mode: u=rwx,g=rx,o=rx
+    state: directory
+  tags:
+    - cronic
+
 - name: Write executable script
   template:
     src: cronic.j2
