@@ -5,7 +5,7 @@
     path: /usr/local/bin
     owner: "{{ cronic_owner | default('root') }}"
     group: "{{ cronic_group | default('root') }}"
-    mode: u=rwx,g=rx,o=rx
+    mode: u=rwx,g=rwx,o=rx
     state: directory
   tags:
     - cronic
