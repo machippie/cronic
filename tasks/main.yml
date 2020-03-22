@@ -12,7 +12,7 @@
 
 - name: Write executable script
   template:
-    src: cronic.j2
+    src: script.j2
     dest: /usr/local/bin/cronic
     owner: "{{ cronic_owner | default('root') }}"
     group: "{{ cronic_group | default('root') }}"
